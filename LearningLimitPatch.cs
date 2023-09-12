@@ -1,18 +1,19 @@
 ﻿using HarmonyLib;
 using System;
-using System.Reflection;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.GameComponents;
-using TaleWorlds.Core;
-using TaleWorlds.Library;
 using TaleWorlds.Localization;
+using MinimumExperienceGain.Settings;
 
 namespace MinimumExperienceGain
 {
+
     [HarmonyPatch(typeof(DefaultCharacterDevelopmentModel), "CalculateLearningRate")]
     [HarmonyPatch(new Type[] { typeof(int), typeof(int), typeof(int), typeof(int), typeof(TextObject), typeof(bool) })]
     public class LearningLimitPatch
     {
+        public static float minLearningRate = MCMConfig.Instance.minLearningRate;
+
         static bool Prefix(DefaultCharacterDevelopmentModel __instance, ref ExplainedNumber __result,
            int attributeValue, int focusValue, int skillValue, int characterLevel, TextObject attributeName, bool includeDescriptions = false)
         {
@@ -38,7 +39,7 @@ namespace MinimumExperienceGain
                 result.LimitMin(0f);
             } else
             {
-                result.LimitMin(1f);
+                result.LimitMin(minLearningRate);
             }
 
             __result = result;

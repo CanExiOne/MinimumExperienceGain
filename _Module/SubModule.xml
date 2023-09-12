@@ -9,8 +9,8 @@
   <ModuleType value="Community" />
   <Url value="$moduleurl$" />
   <DependedModules>
-    <DependedModule Id="Bannerlord.Harmony" DependentVersion="v2.2.2" />
-    <DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.7.1" />
+    <DependedModule Id="Bannerlord.Harmony"/>
+    <DependedModule Id="Bannerlord.MBOptionScreen"/>
     <DependedModule Id="Native" />
     <DependedModule Id="SandBoxCore" />
     <DependedModule Id="Sandbox" />
@@ -19,28 +19,28 @@
   </DependedModules>
   <!-- Community Dependency Metadata -->
   <DependedModuleMetadatas>
-    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.2.2" />
-    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.7.1" />
-    <DependedModuleMetadata id="Native" order="LoadBeforeThis" />
-    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" />
-    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" />
-    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" />
-    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" />
+    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="2.3.0.174"/>
+    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="5.9.1.0"/>
+    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="1.1.5"/>
+    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="1.1.5"/>
+    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="1.1.5"/>
+    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="1.1.5"/>
+    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="1.1.5"/>
   </DependedModuleMetadatas>
   <!-- Community Dependency Metadata -->
   <SubModules>
-    <SubModule>
-      <Name value="MCMv5" />
-      <DLLName value="MCMv5.dll" />
-      <SubModuleClassType value="MCM.MCMSubModule" />
-      <Tags />
-    </SubModule>
-    <SubModule>
-      <Name value="MCMv5 Basic Implementation" />
-      <DLLName value="MCMv5.dll" />
-      <SubModuleClassType value="MCM.Internal.MCMImplementationSubModule" />
-      <Tags />
-    </SubModule>
+	<SubModule>
+		<Name value="MCMv5" />
+		<DLLName value="MCMv5.dll" />
+		<SubModuleClassType value="MCM.MCMSubModule" />
+		<Tags />
+	</SubModule>
+	<SubModule>
+		<Name value="MCMv5 Basic Implementation" />
+		<DLLName value="MCMv5.dll" />
+		<SubModuleClassType value="MCM.Internal.MCMImplementationSubModule" />
+		<Tags />
+	</SubModule>
     <SubModule>
       <Name value="$modulename$" />
       <DLLName value="$modulename$.dll" />
