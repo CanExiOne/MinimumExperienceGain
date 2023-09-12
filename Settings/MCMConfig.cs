@@ -9,6 +9,7 @@ namespace MinimumExperienceGain.Settings
     internal class MCMConfig : IDisposable
     {
         public float minLearningRate { get; set; }
+        public int maxSkillValue { get; set; }
         public bool firstRunDone { get; set; }
 
         private static MCMConfig _instance;
@@ -34,8 +35,11 @@ namespace MinimumExperienceGain.Settings
             .SetFolderName(SubModule.ModuleFolderName)
                 .SetSubFolder(SubModule.ModuleName)
                 .CreateGroup("General Settings", groupBuilder => groupBuilder
-                    .AddFloatingInteger("MinimumLearningRate", "Minimum Learning Rate", 0, 100, new ProxyRef<float>(() => minLearningRate, o => minLearningRate = o), floatingBuilder => floatingBuilder
+                    .AddFloatingInteger("MinimumLearningRate", "Minimum Learning Rate", 0, 10, new ProxyRef<float>(() => minLearningRate, o => minLearningRate = o), floatingBuilder => floatingBuilder
                         .SetHintText("Change Minimum Learning Rate for Skills")
+                        .SetRequireRestart(true))
+                    .AddInteger("maxSkillValue", "Maximum Skill Value", 1, 1000, new ProxyRef<int>(() => maxSkillValue, o => maxSkillValue = o), integerBuilder => integerBuilder
+                        .SetHintText("Change Maximum Skill Value")
                         .SetRequireRestart(true))
                     )
                 .CreateGroup("Reset Settings", groupBuilder => groupBuilder
@@ -56,9 +60,12 @@ namespace MinimumExperienceGain.Settings
 
         private void Perform_First_Time_Setup()
         {
-            InformationManager.DisplayMessage(new InformationMessage("Settings Updated"));
             Instance.minLearningRate = 0.75f;
+            Instance.maxSkillValue = 300;
             Instance.firstRunDone = true;
+
+            InformationManager.DisplayMessage(new InformationMessage(String.Format("{0} default settings loaded", SubModule.ModuleName), Colors.Yellow));
+
         }
 
         public void Dispose()

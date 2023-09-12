@@ -13,6 +13,7 @@ namespace MinimumExperienceGain
     public class LearningLimitPatch
     {
         public static float minLearningRate = MCMConfig.Instance.minLearningRate;
+        public static int maxSkillValue = MCMConfig.Instance.maxSkillValue;
 
         static bool Prefix(DefaultCharacterDevelopmentModel __instance, ref ExplainedNumber __result,
            int attributeValue, int focusValue, int skillValue, int characterLevel, TextObject attributeName, bool includeDescriptions = false)
@@ -34,7 +35,7 @@ namespace MinimumExperienceGain
                 int num2 = skillValue - num;
                 result.AddFactor(-1f - 0.1f * (float)num2, _overLimitText);
             }
-            if (skillValue >= 300)
+            if (skillValue >= maxSkillValue)
             {
                 result.LimitMin(0f);
             } else
