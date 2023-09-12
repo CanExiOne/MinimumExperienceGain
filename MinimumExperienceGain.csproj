@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
     <Platforms>x64</Platforms>
     <LangVersion>10.0</LangVersion>
@@ -14,6 +14,13 @@
     <GameFolder>$(BANNERLORD_GAME_DIR)</GameFolder>
     <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Win64_Shipping_Client\Bannerlord.exe')">Win64_Shipping_Client</GameBinariesFolder>
     <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Gaming.Desktop.x64_Shipping_Client\Bannerlord.exe')">Gaming.Desktop.x64_Shipping_Client</GameBinariesFolder>
+    <Authors>CanExiOne</Authors>
+    <Company>CanExiOne</Company>
+    <Description>A mod for Bannerlord that changes Minimum Learning Rate</Description>
+    <Copyright>CanExiOne</Copyright>
+    <PackageProjectUrl>https://github.com/CanExiOne/MinimumExperienceGain</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/CanExiOne/MinimumExperienceGain</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <PropertyGroup Condition="$(TargetFramework) == 'net472'">

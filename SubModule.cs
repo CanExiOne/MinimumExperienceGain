@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using MinimumExperienceGain.Settings;
+using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
 namespace MinimumExperienceGain
@@ -26,6 +27,8 @@ namespace MinimumExperienceGain
         protected override void OnBeforeInitialModuleScreenSetAsRoot()
         {
             MCMConfig.Instance.Settings();
+
+            InformationManager.DisplayMessage(new InformationMessage(string.Format("{0} loaded", ModuleName), Colors.Green));
 
             base.OnBeforeInitialModuleScreenSetAsRoot();
         }

@@ -8,25 +8,25 @@
   <ModuleCategory value="Singleplayer"/>
   <ModuleType value="Community" />
   <Url value="$moduleurl$" />
-  <DependedModules>
-    <DependedModule Id="Bannerlord.Harmony"/>
-    <DependedModule Id="Bannerlord.MBOptionScreen"/>
-    <DependedModule Id="Native" />
-    <DependedModule Id="SandBoxCore" />
-    <DependedModule Id="Sandbox" />
-    <DependedModule Id="StoryMode" />
-    <DependedModule Id="CustomBattle" />
-  </DependedModules>
-  <!-- Community Dependency Metadata -->
-  <DependedModuleMetadatas>
-    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="2.3.0.174"/>
-    <DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="5.9.1.0"/>
-    <DependedModuleMetadata id="Native" order="LoadBeforeThis" version="1.1.5"/>
-    <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="1.1.5"/>
-    <DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="1.1.5"/>
-    <DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="1.1.5"/>
-    <DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="1.1.5"/>
-  </DependedModuleMetadatas>
+	<DependedModules>
+		<DependedModule Id="Bannerlord.Harmony" DependentVersion="v2.3.0.*" />
+		<DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.9.1.0" />
+		<DependedModule Id="Native" DependentVersion="v1.1.5.*" />
+		<DependedModule Id="SandBoxCore" DependentVersion="v1.1.5.*" />
+		<DependedModule Id="Sandbox" DependentVersion="v1.1.5.*" />
+		<DependedModule Id="StoryMode" DependentVersion="v1.1.5.*" />
+		<DependedModule Id="CustomBattle" DependentVersion="v1.1.5.*" />
+	</DependedModules>
+	<!-- Community Dependency Metadata -->
+	<DependedModuleMetadatas>
+		<DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v2.3.0.174"/>
+		<DependedModuleMetadata id="Bannerlord.MBOptionScreen" order="LoadBeforeThis" version="v5.9.1.0"/>
+		<DependedModuleMetadata id="Native" order="LoadBeforeThis" version="v$gameversion$.*" />
+		<DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" version="v$gameversion$.*" />
+		<DependedModuleMetadata id="Sandbox" order="LoadBeforeThis" version="v$gameversion$.*" />
+		<DependedModuleMetadata id="StoryMode" order="LoadBeforeThis" version="v$gameversion$.*" />
+		<DependedModuleMetadata id="CustomBattle" order="LoadBeforeThis" version="v$gameversion$.*" />
+	</DependedModuleMetadatas>
   <!-- Community Dependency Metadata -->
   <SubModules>
 	<SubModule>
