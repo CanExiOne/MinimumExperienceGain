@@ -14,12 +14,12 @@
     <GameFolder>$(BANNERLORD_GAME_DIR)</GameFolder>
     <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Win64_Shipping_Client\Bannerlord.exe')">Win64_Shipping_Client</GameBinariesFolder>
     <GameBinariesFolder Condition="Exists('$(GameFolder)\bin\Gaming.Desktop.x64_Shipping_Client\Bannerlord.exe')">Gaming.Desktop.x64_Shipping_Client</GameBinariesFolder>
-    <Authors>CanExiOne</Authors>
-    <Company>CanExiOne</Company>
+    <Authors>PuszkaPotato</Authors>
+    <Company>PuszkaPotato</Company>
     <Description>A mod for Bannerlord that changes Minimum Learning Rate</Description>
-    <Copyright>CanExiOne</Copyright>
-    <PackageProjectUrl>https://github.com/CanExiOne/MinimumExperienceGain</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/CanExiOne/MinimumExperienceGain</RepositoryUrl>
+    <Copyright>PuszkaPotato</Copyright>
+    <PackageProjectUrl>https://github.com/PuszkaPotato/MinimumExperienceGain</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/PuszkaPotato/MinimumExperienceGain</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
@@ -74,7 +74,7 @@
     <PackageReference Include="Bannerlord.Lib.Harmony" Version="2.3.0" IncludeAssets="compile" />
     <PackageReference Include="Harmony.Extensions" Version="3.2.0.77" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
     <PackageReference Include="BUTR.Harmony.Analyzer" Version="1.0.1.50" PrivateAssets="all" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive" />
-	<PackageReference Include="Bannerlord.MCM" Version="5.0.0" IncludeAssets="compile" />
+	<PackageReference Include="Bannerlord.MCM" Version="5.9.1" IncludeAssets="compile" />
   </ItemGroup>
 
 </Project>
